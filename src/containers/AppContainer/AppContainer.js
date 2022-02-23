@@ -4,7 +4,7 @@ import Poll from "../../components/Poll";
 
 const AppContainer = () => {
     const poll = {
-        question: 'How doyou feel today:',
+        question: 'How do you feel today :',
         options: ['Brilliant! I have so much energy', 'Always can be worse', 'Please, end my misery']
     }
   return (
