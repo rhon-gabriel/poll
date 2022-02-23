@@ -1,10 +1,13 @@
 import React from "react";
-import AppContainer from "./containers/AppContainer/AppContainer";
+import styles from "./App.module.css";
+import Poll from "./components/Poll";
 
-const App = () => {
+const App = ({poll}) => {
   return (
-    <div className="App">
-      <AppContainer />
+    <div className={styles.container}>
+      <main>
+         <Poll {...poll}/>
+      </main>
     </div>
   );
 };
