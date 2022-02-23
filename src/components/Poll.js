@@ -39,8 +39,8 @@ const Poll = ({ question, options }) => {
       <ul>
         {options.map((option, index) => {
           return (
-            <>
-              <li key={index} onClick={() => handlePoll(option)}>
+            <div key={index}>
+              <li onClick={() => handlePoll(option)}>
                 <input name="poll_value" type="radio" value={option} />
                 {option}
                 {isSubmitted && (
@@ -49,7 +49,7 @@ const Poll = ({ question, options }) => {
                   />
                 )}
               </li>
-            </>
+            </div>
           );
         })}
       </ul>
