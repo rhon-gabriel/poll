@@ -1,15 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./AppContainer.module.css";
+import Poll from "../../components/Poll";
 
 const AppContainer = () => {
-  const navigate = useNavigate();
+    const poll = {
+        question: 'How doyou feel today:',
+        options: ['Brilliant! I have so much energy', 'Always can be worse', 'Please, end my misery']
+    }
   return (
     <div className={styles.container}>
       <header>Simple Poll widget</header>
       <main>
-        <button onClick={() => navigate("/poll/1")}>Poll 1</button>
-        <button onClick={() => navigate("/poll/2")}>Poll 2</button>
+         <Poll {...poll}/>
       </main>
       <footer>Rhoneil Gabriel</footer>
     </div>
