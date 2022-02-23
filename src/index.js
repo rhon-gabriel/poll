@@ -5,15 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const WidgetDivs = document.querySelectorAll('.poll_widget')
-const poll = {
-  question: 'How do you feel today :',
-  options: ['Brilliant! I have so much energy', 'Always can be worse', 'Please, end my misery']
-}
+
+const question = document
+    .querySelector(".poll_widget")
+    .getAttribute("data-question");
+
+const options = JSON.parse(document
+.querySelector(".poll_widget")
+.getAttribute("data-options"))
+
 
 WidgetDivs.forEach(Div => {
   ReactDOM.render(
     <React.StrictMode>
-      <App poll={poll}/>
+      <App question={question} options={options}/>
     </React.StrictMode>,
     Div
   );

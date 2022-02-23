@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./App.module.css";
 import Poll from "./components/Poll";
 
-const App = ({poll}) => {
+const App = ({ question, options }) => {
   return (
     <div className={styles.container}>
       <main>
-         <Poll {...poll}/>
+        <Poll question={question} options={options} />
       </main>
     </div>
   );
